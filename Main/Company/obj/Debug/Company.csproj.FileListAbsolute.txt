@@ -1,0 +1,7 @@
+C:\Git\test_oop\Main\Company\bin\Debug\Company.exe.config
+C:\Git\test_oop\Main\Company\bin\Debug\Company.exe
+C:\Git\test_oop\Main\Company\bin\Debug\Company.pdb
+C:\Git\test_oop\Main\Company\obj\Debug\Company.csproj.CoreCompileInputs.cache
+C:\Git\test_oop\Main\Company\obj\Debug\Company.exe
+C:\Git\test_oop\Main\Company\obj\Debug\Company.pdb
+C:\Git\test_oop\Main\Company\obj\Debug\Company.csprojResolveAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Company.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,10 @@ namespace Company
     {
         static void Main(string[] args)
         {
+           
+            var a = new Employee("alex", new DateTime(1999,10,10));
+            
+            Console.WriteLine(a.GetSalary());
         }
     }
 }
