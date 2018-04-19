@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Company.Unility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,8 +44,8 @@ namespace Company.Entities
 
         public double GetSalaryForPeriod(DateTime startPeriod, DateTime endPeriod)
         {
-            return 0;
+            var mountg = UtilityDataTime.DiferentMonth(startPeriod, endPeriod);
+            return GetSalary() * (mountg == 0 ? 1 : mountg);
         }
-        
     }
 }

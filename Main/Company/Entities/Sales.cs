@@ -7,23 +7,38 @@ using System.Threading.Tasks;
 
 namespace Company.Entities
 {
-    public class Employee : Base , IBoss
+    public class Sales : Base , IBoss, IEmpMethods
     {
-        public Employee(string name, DateTime beginning) : base(name, beginning) 
+        public Sales(string name, DateTime beginning) : base(name, beginning)
         {
             // magic numbers :)
-            MaxPercent = 30;
-            ProcentForYears = 3;
+            MaxPercent = 35;
+            ProcentForYears = 1;
 
             this.Name = name;
             this.BeginningWork = beginning;
         }
 
         private Base Boss;
-
+        private Base[] Employees;
         public void AddBoss(Base boss)
         {
             Boss = boss ?? throw new Exception("Ooppppsssss, boss == null");
+        }
+
+        public void AddEmployees(Base[] emp)
+        {
+            Employees = emp;
+        }
+
+        public List<Base> GetAllEmployees()
+        {
+            List<Base> list = new List<Base>();
+            foreach (var emp in Employees)
+            {
+                list.Add(emp);
+            }
+            return list;
         }
 
         public void GetNameBoss()

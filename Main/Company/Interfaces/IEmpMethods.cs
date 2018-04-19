@@ -9,8 +9,8 @@ namespace Company.Interfaces
 {
     interface IEmpMethods
     {
-        Base[] Employees { get; set; }
-        void AddEmployees(Base[] emp);
-        List<Base> GetAllEmployees();
+        List<Base> Employees { get; set; }
+        void AddEmployees(Base emp); 
+        
     }
 }

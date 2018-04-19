@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Company.Entities
 {
-    public class Employee : Base , IBoss
+    public class Manager : Base, IBoss, IEmpMethods
     {
-        public Employee(string name, DateTime beginning) : base(name, beginning) 
+        public Manager(string name, DateTime beginning) : base(name, beginning)
         {
             // magic numbers :)
-            MaxPercent = 30;
-            ProcentForYears = 3;
+            MaxPercent = 40;
+            ProcentForYears = 5;
 
             this.Name = name;
             this.BeginningWork = beginning;
@@ -21,10 +21,16 @@ namespace Company.Entities
 
         private Base Boss;
 
+        public List<Base> Employees { get; set; }
+
         public void AddBoss(Base boss)
         {
             Boss = boss ?? throw new Exception("Ooppppsssss, boss == null");
         }
+
+       
+
+ 
 
         public void GetNameBoss()
         {
@@ -32,6 +38,11 @@ namespace Company.Entities
                 throw new Exception("Boss not have Name ????");
 
             Console.WriteLine(Boss.Name);
+        }
+
+        public void AddEmployees(Base emp)
+        {
+            Employees.Add(emp);
         }
     }
 }
